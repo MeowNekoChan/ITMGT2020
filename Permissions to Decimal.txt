@@ -1,0 +1,7 @@
+The decimal notation for permissions is 
+
+400, 40, and 0
+
+Source:
+
+http://www.filepermissions.com/articles/understanding-octal-file-permissions
