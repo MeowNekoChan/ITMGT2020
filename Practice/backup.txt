@@ -1,0 +1,38 @@
+file = open("interns-july2020.csv")
+all_lines = list()
+per_line = list()
+line_order = 0
+
+
+for n in file:
+    if line_order > 0:
+        m = n.split(",")
+        per_line.append(m)
+    line_order += 1
+
+
+for i in per_line:
+    person_id = i[0]
+    hours = int(i[2])
+    utilization = get_utilization(hours)
+    
+    
+for i in per_line:
+    person_id = i[0]
+    base_pay = int(i[1])
+    hours = int(i[2])
+    pay = get_takehome_pay(hours, base_pay)
+    print(person_id, pay)
+    
+#with open("payslip-july2020.txt", "w+") as csvfile:
+ #   txthandle = csv.writer(csvfile)
+  #  r = "meow"
+   # txthandle.writerow(r)
+
+#firstl = "Payroll Date   : July 25, 2020 \n\r" 
+    #secondl ="ID:            :" + r["id"], "\n\r"
+    #thirdl = "Base Pay       :" + r["base_monthly_pay"], "\n\r",
+    #fourthl = "------------------------------\n\r",
+    #fifthl = "Hours Rendered :", r["hours_rendered"], "\n\r",
+    #sixthl = "Takehome Pay   :", r["takehome_pay"], "\n\r\n\r",
+                 # "______________________________"
